@@ -1,12 +1,12 @@
 [project]
-name = "ty"
-version = "0.0.29"
+name = "ty-lsai"
+version = "0.1.0"
 requires-python = ">=3.8"
 dependencies = []
-description = "An extremely fast Python type checker, written in Rust."
+description = "ty fork with callHierarchy LSP support for LSAI (Language Server AI)."
 readme = "README.md"
-authors = [{ name = "Astral Software Inc.", email = "hey@astral.sh" }]
-keywords = ["ty", "typing", "analysis", "check"]
+authors = [{ name = "0ics s.r.l.s.", email = "info@0ics.it" }]
+keywords = ["ty", "typing", "analysis", "check", "lsp", "call-hierarchy", "lsai"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: Console",
@@ -30,10 +30,8 @@ classifiers = [
 ]
 
 [project.urls]
-Repository = "https://github.com/astral-sh/ty"
-Changelog = "https://github.com/astral-sh/ty/blob/main/CHANGELOG.md"
-Releases = "https://github.com/astral-sh/ty/releases"
-Discord = "https://discord.gg/astral-sh"
+Repository = "https://github.com/0ics-srls/ty"
+Upstream = "https://github.com/astral-sh/ty"
 
 [build-system]
 requires = ["maturin>=1.0,<2.0"]
@@ -89,7 +87,7 @@ required-imports = ["from __future__ import annotations"]
 [tool.maturin]
 bindings = "bin"
 manifest-path = "ruff/crates/ty/Cargo.toml"
-module-name = "ty"
+module-name = "ty_lsai"
 python-source = "python"
 strip = true
 include = [
